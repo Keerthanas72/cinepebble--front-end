@@ -1,0 +1,19 @@
+<html>
+
+<body>
+    <button id="myButton">Click Me</button>
+    <p id="count"></p>
+    <script>
+        var count = 0;
+        var button = document.getElementById("myButton");
+        var countDisplay = document.getElementById("count");
+        button.addEventListener("click", (function (count) {
+            return function () {
+                count++;
+                countDisplay.innerHTML = count;
+            }
+        })(count));
+    </script>
+</body>
+
+</html>
